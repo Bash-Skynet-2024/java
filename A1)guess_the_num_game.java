@@ -7,7 +7,11 @@ public class Main {
             System.out.println("Guess the number : (1-100) , enter '-1' to exit");
             int usernum = sc.nextInt();
 
-            if(usernum == mynum){
+            if(usernum == -1) {
+                System.out.println("You lose .. the number is : " + mynum);
+                break;
+            }
+            else if(usernum == mynum){
                 System.out.println("Correct guess ");
                 break;
             }
@@ -17,10 +21,7 @@ public class Main {
             else if(usernum < mynum){
                 System.out.println("Wrong , guessed number too low");
             }
-            else if(usernum == -1){
-                System.out.println("You lose .. the number is : " + mynum);
-                break;
-            }
+
         }while(true);
     }
 }
